@@ -9,3 +9,4 @@ mkdir "$1"
 cd "$1"
 zig init
 rm -rf "src/root.zig"
+cp ../stub.zig src/main.zig
