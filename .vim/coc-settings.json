@@ -1,0 +1,13 @@
+{
+  "[zig]": {
+    "coc.preferences.formatOnSave": false,
+    "semanticTokens.enable": true
+  },
+
+  "languageserver": {
+    "zls": {
+      "command": "zls",
+      "filetypes": ["zig", "zon"]
+    }
+  }
+}
