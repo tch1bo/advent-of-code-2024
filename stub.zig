@@ -7,9 +7,9 @@ fn readMap(path: []const u8) !void{
     const file = std.fs.cwd().openFile(path, .{}) catch unreachable;
     defer file.close();
 
-    const maxNumLines = 10000;
+    const maxLineLen = 10000;
 
-    while (try file.reader().readUntilDelimiterOrEofAlloc(allocator, '\n', maxNumLines)) |line| {
+    while (try file.reader().readUntilDelimiterOrEofAlloc(allocator, '\n', maxLineLen)) |line| {
         defer allocator.free(line);
 
         print("{s}\n", .{line});
